@@ -1,7 +1,10 @@
-import SearchBar from './SearchBar'
-import VideoList from './VideoList'
+// import SearchBar from './SearchBar'
+// import VideoList from './VideoList'
 
+// export {
+//     SearchBar,
+//     VideoList   
+// }
 
-
-export * from './SearchBar'
-export * from './VideoList'
+import * as SearchBar  from './SearchBar'
+import * as VideoList from './VideoList'

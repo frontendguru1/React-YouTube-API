@@ -1,1 +1,18 @@
-body {margin: 0; padding: 0;}
+body {margin: 0; padding: 0; background: #f2f2f2; font-family: 'Roboto', sans-serif;}
+*{box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+.video-container {max-width: 1170px; margin: 0 auto; background: #fff; padding: 14px; display: flex;}
+.video-col-left {flex: 1; padding: 8px;}
+.video-player-container{width: 100%; min-height: 450px; border: 1px solid #ccc; background: #f2f2f2;}
+
+.video-thumbs-container {width: 250px; max-height: 450px; overflow-y: auto; padding: 8px;}
+.video-thumbs-container ul{margin: 0; padding: 0;}
+.video-thumbs-container li{list-style: none; margin: 0 0 20px 0; padding: 0; cursor: pointer;}
+.video-thumbs-container li img {width: 100%; height: auto;}
+.video-thumbs-container .video-thumb-title {font-size: 13px; font-weight: 600; color:#000;}
+
+.header-wrapper{background: #fff; padding: 15px 0; margin-bottom: 15px;}
+.header-wrapper .container {max-width: 1170px; margin: 0 auto; display: flex; justify-content: space-between;}
+.header-wrapper .logo{width: auto; font-size: 20px; font-weight: 600; color: #000;}
+.search-bar{display: flex; align-items: center; font-size: 12px; font-weight: 600; color: #000;}
+.search-bar span {padding-right: 10px;}
+.search-bar input{width: 100%; padding: 5px; font-size: 13px; color: #000; height: 30px; border: 1px solid #ccc; border-radius: 3px;}
