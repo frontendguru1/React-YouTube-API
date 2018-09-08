@@ -43,9 +43,7 @@ class YoutubeVideos extends React.Component {
                 {this.renderHeader()}                
                 <div className={'video-container'}>
                     <div className={'video-col-left'}>
-                        <div className={'video-player-container'}>
-                            <VideoPlayer video={this.state.selectedVideo} />
-                        </div>
+                        <VideoPlayer video={this.state.selectedVideo} />
                     </div>
                     <div className={'video-thumbs-container'}>
                         <VideoList videos={this.state.videos} onVideoSelect={selectedVideo=>this.setState({selectedVideo})} />

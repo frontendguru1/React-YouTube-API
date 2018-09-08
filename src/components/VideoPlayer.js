@@ -9,12 +9,19 @@ class VideoPlayer extends React.Component {
         const url = `https://youtube.com/embed/${videoId}`
 
         if(!this.props.video) {
-            return <div>Loading...</div>
+            return <div className={'video-loader'}>Loading...</div>
         }
 
         return (
-            <div className={'video-player-container'}>
-                 <iframe src={url} />
+            <div>
+                <div className={'video-player-container'}>
+                    <iframe src={url} />
+                </div>
+                <div className={'video-details'}>
+                    <div className={'video-title'}>{this.props.video.snippet.title}</div>                    
+                    <div className={'video-des'}>{this.props.video.snippet.description}</div>
+
+                </div>
             </div>
         )
     }
