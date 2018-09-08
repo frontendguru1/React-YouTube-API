@@ -9,6 +9,7 @@ body {margin: 0; padding: 0; background: #f2f2f2; font-family: 'Roboto', sans-se
 .video-thumbs-container li{list-style: none; margin: 0 0 20px 0; padding: 0; cursor: pointer;}
 .video-thumbs-container li img {width: 100%; height: auto;}
 .video-thumbs-container .video-thumb-title {font-size: 13px; font-weight: 600; color:#000;}
+.video-player-container iframe {width: 100%; height: 450px; border: 0;}
 
 .header-wrapper{background: #fff; padding: 15px 0; margin-bottom: 15px;}
 .header-wrapper .container {max-width: 1170px; margin: 0 auto; display: flex; justify-content: space-between;}
