@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server public",
-    "dev-server": "webpack-dev-server --port 3000",
+    "live-server": "live-server public",
+    "start": "webpack-dev-server --port 3000",
     "build": "webpack --watch",
     "build-babel": "babel src/app.js --out-file=public/bundle.js --presets=env,react --watch"
   },
