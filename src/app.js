@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import _ from 'lodash'
 import YTSearch from 'youtube-api-search'
 import SearhBar from './components/SearchBar'
 import VideoList from './components/VideoList'
@@ -14,22 +15,26 @@ class YoutubeVideos extends React.Component {
             videos: [],
             selectedVideo: null,
         }
-        
+        this.videoSearch("Java")
+    }
+
+    videoSearch(term) {
         YTSearch({
             key: API_KEY,
-            terms: 'React Project - Fetch YouTube Videos'
+            term: term
         }, (videos) => {
             this.setState({videos, selectedVideo: videos[0]})
         })
     }
 
     renderHeader() {
+        const _videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 500)
         return(
             <div className={'header-wrapper'}>
                 <div className={'container'}>
                     <div className={'logo'}>YouTube Video API</div>
                     <div className={'search-container'}>
-                        <SearhBar />
+                        <SearhBar onSearchTermChange={_videoSearch} />
                     </div>
                 </div>
             </div>
@@ -37,10 +42,9 @@ class YoutubeVideos extends React.Component {
     }
     
     render() {
-        console.log(this.state.videos)
         return(
             <div>
-                {this.renderHeader()}                
+                { this.renderHeader() }   
                 <div className={'video-container'}>
                     <div className={'video-col-left'}>
                         <VideoPlayer video={this.state.selectedVideo} />

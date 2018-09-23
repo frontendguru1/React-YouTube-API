@@ -5,7 +5,6 @@ class VideoPlayer extends React.Component {
 
     render() {
         const videoId = this.props.video && this.props.video.id && this.props.video.id.videoId
-        console.log(videoId)
         const url = `https://youtube.com/embed/${videoId}`
 
         if(!this.props.video) {
